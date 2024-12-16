@@ -1,0 +1,27 @@
+Video ID,Target Stack,Input Data Path
+sample_30_301,stack3,processed_data/individual_vids/30fps/sample_30_301.csv
+sample_30_101,stack1,processed_data/individual_vids/30fps/sample_30_101.csv
+sample_30_202,stack2,processed_data/individual_vids/30fps/sample_30_202.csv
+sample_30_302,stack3,processed_data/individual_vids/30fps/sample_30_302.csv
+sample_30_201,stack2,processed_data/individual_vids/30fps/sample_30_201.csv
+sample_30_100,stack1,processed_data/individual_vids/30fps/sample_30_100.csv
+sample_30_102,stack1,processed_data/individual_vids/30fps/sample_30_102.csv
+sample_30_300,stack3,processed_data/individual_vids/30fps/sample_30_300.csv
+sample_30_200,stack2,processed_data/individual_vids/30fps/sample_30_200.csv
+sample_60_205,stack2,processed_data/individual_vids/60fps/sample_60_205.csv
+sample_60_102,stack1,processed_data/individual_vids/60fps/sample_60_102.csv
+sample_60_204,stack2,processed_data/individual_vids/60fps/sample_60_204.csv
+sample_60_301,stack3,processed_data/individual_vids/60fps/sample_60_301.csv
+sample_60_105,stack1,processed_data/individual_vids/60fps/sample_60_105.csv
+sample_60_303,stack3,processed_data/individual_vids/60fps/sample_60_303.csv
+sample_60_103,stack1,processed_data/individual_vids/60fps/sample_60_103.csv
+sample_60_101,stack1,processed_data/individual_vids/60fps/sample_60_101.csv
+sample_60_202,stack2,processed_data/individual_vids/60fps/sample_60_202.csv
+sample_60_304,stack3,processed_data/individual_vids/60fps/sample_60_304.csv
+sample_60_200,stack2,processed_data/individual_vids/60fps/sample_60_200.csv
+sample_60_300,stack3,processed_data/individual_vids/60fps/sample_60_300.csv
+sample_60_201,stack2,processed_data/individual_vids/60fps/sample_60_201.csv
+sample_60_104,stack1,processed_data/individual_vids/60fps/sample_60_104.csv
+sample_60_302,stack3,processed_data/individual_vids/60fps/sample_60_302.csv
+sample_60_203,stack2,processed_data/individual_vids/60fps/sample_60_203.csv
+sample_60_100,stack1,processed_data/individual_vids/60fps/sample_60_100.csv
