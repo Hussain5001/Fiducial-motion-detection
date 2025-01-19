@@ -1,1 +1,1 @@
-python3 tag_to_svg.py tag36_11_00000.png tag52_13_00000.svg --size=1000mm
+python3 tag_to_svg.py tag36_11_00000.png 3cm_tag36_11_00000.svg --size=30mm
