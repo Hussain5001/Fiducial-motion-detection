@@ -30,12 +30,10 @@ matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
 
-# Initialize AprilTag detector
 options = apriltag.DetectorOptions(families="tag36h11")
 detector = apriltag.Detector(options)
 print(f"Supported tag families: {options.families}")
 
-# Open the video file
 video_path = "videos/phone_vid2.mp4"  
 cap = cv2.VideoCapture(video_path)
 
@@ -43,7 +41,7 @@ if not cap.isOpened():
     print("Error: Cannot open video.")
     exit()
 
-# preprocessing as 60fps on higher resolution giving issues
+
 fps = cap.get(cv2.CAP_PROP_FPS)
 print(f"Video FPS: {fps}")
 use_preprocessing = fps >= 55
