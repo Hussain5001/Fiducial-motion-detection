@@ -1,11 +1,11 @@
 import os
 import csv
 
-# Paths
+#paths
 input_dir = "processed_data/individual_vids"  
 output_mapping_file = "processed_data/mapping_data.csv"  
 
-# Function to extract the target stack from file name
+#function to extract the target stack from file name
 def extract_target_stack(file_name):
     try:
 

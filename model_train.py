@@ -1,5 +1,5 @@
 import pandas as pd
-import sklearn.neighbors._base # this is from `scikit-learn` instead of `sklearn`
+import sklearn.neighbors._base #for using missforest imputer as not working by directly importing MissForest 
 import sys
 sys.modules['sklearn.neighbors.base'] = sklearn.neighbors._base
 from missingpy import MissForest
@@ -10,6 +10,7 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import classification_report, confusion_matrix
 import seaborn as sns
 import matplotlib.pyplot as plt
+
 #from sklearn.impute import IterativeImputer, SimpleImputer
 #from sklearn.preprocessing import StandardScaler
 
@@ -32,21 +33,21 @@ X_imputed = imputer.fit_transform(X)
 #scaler = StandardScaler()
 #X_scaled = scaler.fit_transform(X_imputed)
 
-# Split the data into training and testing sets (80% training, 20% testing)
+#split the data into training and testing sets (80% training, 20% testing)
 X_train, X_test, y_train, y_test = train_test_split(X_imputed, y, test_size=0.2, random_state=1, stratify=y)
 
-# Train a Random Forest Classifier
+#train a Random Forest Classifier
 clf = RandomForestClassifier(n_estimators=200, random_state=1)
 clf.fit(X_train, y_train)
 
-# Predict on the test set
+#predict on the test set
 y_pred = clf.predict(X_test)
 
-# Evaluate the model
+#evaluate the model
 print("Classification Report:")
 print(classification_report(y_test, y_pred))
 
-# Confusion Matrix
+#confusion Matrix
 conf_matrix = confusion_matrix(y_test, y_pred)
 sns.heatmap(conf_matrix, annot=True, fmt='d', cmap="Blues", xticklabels=clf.classes_, yticklabels=clf.classes_)
 plt.xlabel("Predicted")
@@ -56,11 +57,11 @@ plt.show()
 
 #feature importance
 importances = clf.feature_importances_
-feature_names = data.columns[1:-2]  #Excludes "Action", "Frame", "Video ID"
+feature_names = data.columns[1:-2]  #excludes "Action", "Frame", "Video ID"
 importance_df = pd.DataFrame({"Feature": feature_names, "Importance": importances})
 importance_df.sort_values(by="Importance", ascending=False, inplace=True)
 
-# Plot feature importance
+#plot feature importance
 plt.figure(figsize=(10, 6))
 sns.barplot(x="Importance", y="Feature", data=importance_df)
 plt.title("Feature Importance")
